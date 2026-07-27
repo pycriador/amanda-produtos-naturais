@@ -331,21 +331,31 @@
   <div class="modal" id="produtoModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
     <div class="modal-overlay" tabindex="-1"></div>
     <div class="modal-content">
-      <button class="modal-close" aria-label="Fechar janela" type="button">&times;</button>
+      <button class="modal-close" aria-label="Fechar janela" type="button">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" focusable="false"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
       <div class="modal-body">
-        <figure>
-          <img id="modalImage" src="" alt="" width="400" height="300" decoding="async">
-          <figcaption id="modalLegenda"></figcaption>
-        </figure>
-        <div class="modal-info">
-          <h3 id="modalTitle"></h3>
-          <p id="modalDesc"></p>
+        <div class="modal-header">
+          <figure class="modal-thumb">
+            <img id="modalImage" src="" alt="" width="160" height="120" decoding="async">
+            <figcaption id="modalLegenda"></figcaption>
+          </figure>
+          <div class="modal-header-info">
+            <h3 id="modalTitle"></h3>
+            <p id="modalDesc"></p>
+          </div>
+        </div>
+        <div class="modal-details">
           <div id="modalBeneficios">
             <h4>Benefícios</h4>
             <ul></ul>
           </div>
           <div id="modalUso">
             <h4>Como utilizar</h4>
+            <p></p>
+          </div>
+          <div id="modalReceita">
+            <h4>Receita</h4>
             <p></p>
           </div>
           <div id="modalFAQ" class="modal-faq">

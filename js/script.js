@@ -6,6 +6,7 @@ const produtosBase = [
     descLonga: "O açafrão, também conhecido como cúrcuma, é um tempero de cor alaranjada intensa amplamente utilizado na culinária brasileira e internacional. Rico em curcumina, um poderoso antioxidante natural, o açafrão da Amanda é selecionado manualmente para garantir frescor e aroma incomparáveis.",
     beneficios: ["Antioxidante natural", "Rico em curcumina", "Auxilia alimentação equilibrada", "Cor e sabor únicos"],
     comoUsar: "Arroz, carnes, sopas, legumes, molhos.",
+    receita: "Arroz dourado: refogue 1 xícara de arroz com cebola e alho, adicione 1 colher (chá) de açafrão em pó, misture bem antes de adicionar a água. Cozinhe normalmente. O resultado é um arroz soltinho e dourado.",
     keywords: "açafrão em pó, cúrcuma, tempero natural, açafrão da terra",
     metaTitle: "Açafrão em Pó (Cúrcuma) Natural | Amanda Produtos Naturais",
     metaDesc: "Açafrão em pó natural selecionado. Rico em curcumina, ideal para arroz, carnes, sopas e molhos. Tempero de cor intensa e sabor marcante.",
@@ -21,6 +22,7 @@ const produtosBase = [
     descLonga: "O orégano é uma erva aromática tradicional da culinária mediterrânea, conhecida por seu sabor marcante e versatilidade na cozinha. Nosso orégano é cultivado e desidratado com cuidado para preservar todo o seu aroma e sabor.",
     beneficios: ["Sabor intenso", "Rico em compostos naturais", "Versátil na cozinha"],
     comoUsar: "Pizza, massas, carnes.",
+    receita: "Frango ao orégano: tempere sobrecoxas com sal, pimenta, alho e 1 colher (sopa) de orégano. Regue com azeite e limão. Asse em forno médio por 35 minutos.",
     keywords: "orégano, tempero natural, ervas aromáticas",
     metaTitle: "Orégano Desidratado Natural | Amanda Produtos Naturais",
     metaDesc: "Orégano natural desidratado para pizzas, massas e carnes. Erva aromática tradicional de sabor intenso.",
@@ -35,6 +37,7 @@ const produtosBase = [
     descLonga: "A canela em pó é um dos temperos mais versáteis da culinária, perfeita para preparos doces e salgados. Com aroma agradável e sabor marcante, nossa canela é moída a partir de paus selecionados.",
     beneficios: ["Aroma agradável", "Excelente para doces", "Versátil"],
     comoUsar: "Frutas, café, mingau.",
+    receita: "Banana assada com canela: corte bananas ao meio, polvilhe canela em pó e regue com mel. Asse por 12 minutos a 180°C. Sirva quente.",
     keywords: "canela em pó, tempero doce, canela natural",
     metaTitle: "Canela em Pó Natural | Amanda Produtos Naturais",
     metaDesc: "Canela em pó natural aromática para frutas, café, mingau e receitas. Tempero versátil e saboroso.",
@@ -47,6 +50,7 @@ const produtosBase = [
     descLonga: "O gengibre é uma raiz de sabor picante e aroma marcante, amplamente utilizado na culinária e em preparos medicinais. Rico em compostos bioativos, é perfeito para chás, sucos e receitas.",
     beneficios: ["Sabor picante", "Muito utilizado em chás", "Versátil"],
     comoUsar: "Chás, sucos e receitas.",
+    receita: "Chá de gengibre: ferva 500ml de água com 3 rodelas de gengibre fresco e 1 pau de canela por 5 minutos. Coe e adoce com mel. Perfeito para dias frios.",
     keywords: "gengibre, raiz natural, tempero picante",
     metaTitle: "Gengibre Natural | Amanda Produtos Naturais",
     metaDesc: "Gengibre natural selecionado para chás, sucos e receitas culinárias. Raiz de sabor picante e aromático.",
@@ -59,6 +63,7 @@ const produtosBase = [
     descLonga: "A chia é uma semente milenar reconhecida por seu alto valor nutricional. Fonte de fibras, ômega 3 vegetal e proteínas, é um superalimento versátil que pode ser incorporado em diversas preparações.",
     beneficios: ["Fonte de fibras", "Fonte de ômega 3 vegetal", "Superalimento"],
     comoUsar: "Iogurte, vitaminas, frutas.",
+    receita: "Pudim de chia: misture 3 colheres (sopa) de chia com 200ml de leite vegetal e 1 colher (mel). Deixe na geladeira por 4h. Sirva com frutas frescas.",
     keywords: "chia, semente natural, ômega 3, fibras",
     metaTitle: "Chia em Grãos Natural | Amanda Produtos Naturais",
     metaDesc: "Chia em grãos, fonte de fibras e ômega 3 vegetal. Superalimento versátil para iogurte, vitaminas e frutas.",
@@ -71,6 +76,7 @@ const produtosBase = [
     descLonga: "A linhaça dourada é uma semente rica em fibras e nutrientes essenciais. Perfeita para enriquecer pães, bolos, vitaminas e outras preparações, é uma excelente fonte de saúde.",
     beneficios: ["Fibras", "Sementes nutritivas", "Versátil"],
     comoUsar: "Pães, bolos, vitaminas.",
+    receita: "Vitamina de linhaça: bata no liquidificador 1 banana, 200ml de leite, 1 colher (sopa) de linhaça dourada e 1 colher de mel. Sirva gelado.",
     keywords: "linhaça dourada, semente natural, fibras",
     metaTitle: "Linhaça Dourada Natural | Amanda Produtos Naturais",
     metaDesc: "Linhaça dourada natural rica em fibras e nutrientes. Ideal para pães, bolos e vitaminas.",
@@ -83,6 +89,7 @@ const produtosBase = [
     descLonga: "A quinoa é um grão completo, rico em proteínas vegetais de alta qualidade, fibras e minerais. Considerada um superalimento, é uma excelente alternativa para uma alimentação equilibrada.",
     beneficios: ["Rica em proteínas vegetais", "Superalimento"],
     comoUsar: "Saladas e arroz.",
+    receita: "Salada de quinoa: cozinhe 1 xícara de quinoa em 2 xícaras de água por 15 minutos. Misture com tomate cereja, pepino, hortelã, azeite e limão.",
     keywords: "quinoa, grão natural, proteínas vegetais",
     metaTitle: "Quinoa em Grãos Natural | Amanda Produtos Naturais",
     metaDesc: "Quinoa em grãos natural rica em proteínas vegetais. Superalimento para saladas, arroz e receitas saudáveis.",
@@ -95,6 +102,7 @@ const produtosBase = [
     descLonga: "A aveia é um cereal completo, rico em fibras solúveis que auxiliam o bom funcionamento do organismo. Perfeita para o café da manhã e diversas preparações.",
     beneficios: ["Fibras", "Muito versátil", "Café da manhã"],
     comoUsar: "Café da manhã, mingau, panquecas.",
+    receita: "Mingau de aveia: ferva 200ml de leite com 3 colheres (sopa) de aveia e 1 colher de mel. Mexa até engrossar. Finalize com canela.",
     keywords: "aveia, cereal natural, fibras, café da manhã",
     metaTitle: "Aveia em Flocos Natural | Amanda Produtos Naturais",
     metaDesc: "Aveia em flocos natural rica em fibras. Cereal completo e versátil para café da manhã e receitas.",
@@ -107,6 +115,7 @@ const produtosBase = [
     descLonga: "A castanha-do-Pará é uma oleaginosa típica da Amazônia brasileira, reconhecida por seu alto teor de selênio, um mineral essencial para o organismo. Crocante e saborosa.",
     beneficios: ["Rica em selênio", "Fonte de energia"],
     comoUsar: "Lanches naturais.",
+    receita: "Consuma 2 castanhas-do-Pará por dia como snack ou triture sobre saladas e iogurtes para um toque crocante.",
     keywords: "castanha-do-pará, oleaginosa, selênio, castanha natural",
     metaTitle: "Castanha-do-Pará Natural | Amanda Produtos Naturais",
     metaDesc: "Castanha-do-Pará natural rica em selênio. Oleaginosa da Amazônia crocante e nutritiva para lanches.",
@@ -119,6 +128,7 @@ const produtosBase = [
     descLonga: "As nozes são oleaginosas ricas em gorduras boas (ômega 3), antioxidantes e nutrientes essenciais. Perfeitas como snack saudável ou para enriquecer sobremesas.",
     beneficios: ["Gorduras boas", "Antioxidantes"],
     comoUsar: "Lanches e sobremesas.",
+    receita: "Brownie de nozes: derreta 200g de chocolate com 100g de manteiga, misture 3 ovos, 1 xícara de açúcar e 1/2 xícara de farinha. Adicione 1 xícara de nozes picadas e asse a 180°C por 25 minutos.",
     keywords: "nozes, oleaginosa, gorduras boas, lanche natural",
     metaTitle: "Nozes Natural | Amanda Produtos Naturais",
     metaDesc: "Nozes naturais selecionadas ricas em gorduras boas e antioxidantes. Perfeitas para lanches e sobremesas.",
@@ -131,6 +141,7 @@ const produtosBase = [
     descLonga: "As amêndoas são oleaginosas crocantes, ricas em proteínas, fibras e gorduras boas. Um snack nutritivo e versátil para qualquer momento do dia.",
     beneficios: ["Proteínas", "Fibras"],
     comoUsar: "Snacks naturais.",
+    receita: "Leite de amêndoas: deixe 1 xícara de amêndoas de molho por 8h. Bata com 3 xícaras de água e coe. Adoce a gosto.",
     keywords: "amêndoas, oleaginosa, proteínas, lanche natural",
     metaTitle: "Amêndoas Natural | Amanda Produtos Naturais",
     metaDesc: "Amêndoas naturais crocantes ricas em proteínas e fibras. Snack nutritivo e versátil.",
@@ -143,6 +154,7 @@ const produtosBase = [
     descLonga: "A uva passa é uma fruta desidratada naturalmente doce, rica em energia natural e nutrientes. Perfeita para arroz, bolos, pães e diversas receitas.",
     beneficios: ["Energia natural", "Versátil"],
     comoUsar: "Arroz, bolos, pães.",
+    receita: "Arroz doce com uva passa: cozinhe 1 xícara de arroz com 1 litro de leite e açúcar. Quando cremoso, adicione 1/2 xícara de uva passa e canela.",
     keywords: "uva passa, fruta seca, energia natural",
     metaTitle: "Uva Passa Natural | Amanda Produtos Naturais",
     metaDesc: "Uva passa natural doce fonte de energia. Ideal para arroz, bolos, pães e receitas.",
@@ -155,6 +167,7 @@ const produtosBase = [
     descLonga: "O hibisco é uma flor de cor vibrante utilizada em infusões e chás aromáticos. Conhecido por seu sabor levemente ácido e refrescante, é uma excelente opção para bebidas saudáveis.",
     beneficios: ["Chá aromático", "Refrescante"],
     comoUsar: "Infusão, chás gelados.",
+    receita: "Chá de hibisco gelado: infusione 2 colheres (sopa) de hibisco em 500ml de água fervente por 5 minutos. Coe, adoce e leve à geladeira. Sirva com gelo.",
     keywords: "hibisco, flor natural, chá, infusão",
     metaTitle: "Hibisco Natural para Chá | Amanda Produtos Naturais",
     metaDesc: "Hibisco natural seco para chás e infusões aromáticas. Flor de sabor levemente ácido e refrescante.",
@@ -167,6 +180,7 @@ const produtosBase = [
     descLonga: "A camomila é uma erva tradicionalmente utilizada em infusões calmantes. Com aroma suave e sabor delicado, é a escolha perfeita para momentos de relaxamento.",
     beneficios: ["Chá tradicional", "Calmante"],
     comoUsar: "Infusão.",
+    receita: "Chá de camomila relaxante: coloque 1 colher (sopa) de camomila em 300ml de água fervente. Abafe por 5 minutos, coe e adoce com mel.",
     keywords: "camomila, chá, erva calmante, infusão",
     metaTitle: "Camomila Natural para Chá | Amanda Produtos Naturais",
     metaDesc: "Camomila natural seca para chás e infusões. Erva tradicional de sabor suave e delicado.",
@@ -179,6 +193,7 @@ const produtosBase = [
     descLonga: "A erva-doce é uma planta aromática de sabor suave e adocicado, amplamente utilizada em chás e infusões. Perfeita para ser consumida após as refeições.",
     beneficios: ["Sabor suave", "Digestiva"],
     comoUsar: "Chás, infusões.",
+    receita: "Chá digestivo de erva-doce: ferva 300ml de água com 1 colher (chá) de sementes de erva-doce por 3 minutos. Coe e beba após as refeições.",
     keywords: "erva-doce, chá, erva aromática, infusão",
     metaTitle: "Erva-doce Natural | Amanda Produtos Naturais",
     metaDesc: "Erva-doce natural para chás e infusões. Planta aromática de sabor suave e propriedades digestivas.",
@@ -191,6 +206,7 @@ const produtosBase = [
     descLonga: "O alecrim é uma erva aromática de sabor marcante, indispensável na culinária para carnes, batatas e assados. Cultivado e desidratado para preservar seu aroma inconfundível.",
     beneficios: ["Tempero aromático", "Sabor marcante"],
     comoUsar: "Carnes, batatas, assados.",
+    receita: "Batatas ao alecrim: corte batatas em gomos, tempere com sal, azeite e alecrim. Asse a 200°C por 30 minutos até dourar.",
     keywords: "alecrim, tempero natural, erva aromática",
     metaTitle: "Alecrim Desidratado Natural | Amanda Produtos Naturais",
     metaDesc: "Alecrim desidratado natural de sabor marcante. Erva aromática para carnes, batatas e assados.",
@@ -203,6 +219,7 @@ const produtosBase = [
     descLonga: "A páprica defumada é um tempero de sabor marcante e aroma inconfundível, obtido a partir da moagem de pimentões defumados. Perfeita para carnes e legumes.",
     beneficios: ["Sabor marcante", "Aroma defumado"],
     comoUsar: "Carnes, legumes, molhos.",
+    receita: "Frango com páprica: tempere sobrecoxas com sal, alho, 1 colher (sopa) de páprica defumada e azeite. Grelhe ou asse a 200°C por 30 minutos.",
     keywords: "páprica defumada, tempero natural, páprica",
     metaTitle: "Páprica Defumada Natural | Amanda Produtos Naturais",
     metaDesc: "Páprica defumada natural de sabor marcante. Tempero aromático para carnes, legumes e molhos.",
@@ -215,6 +232,7 @@ const produtosBase = [
     descLonga: "A pimenta-do-reino é o tempero mais utilizado no mundo, conhecida por seu sabor picante e versatilidade. Moída a partir de grãos selecionados.",
     beneficios: ["Realça o sabor", "Versátil"],
     comoUsar: "Qualquer preparo culinário.",
+    receita: "Use pimenta-do-reino moída na hora para temperar carnes, molhos, saladas e ovos. Experimente no café fresco para um toque especial.",
     keywords: "pimenta-do-reino, tempero natural, pimenta moída",
     metaTitle: "Pimenta-do-Reino Moída Natural | Amanda Produtos Naturais",
     metaDesc: "Pimenta-do-reino natural moída, tempero clássico que realça o sabor de qualquer preparo culinário.",
@@ -227,6 +245,7 @@ const produtosBase = [
     descLonga: "A granola Amanda é uma mistura selecionada de cereais, frutas secas e oleaginosas. Crocante e nutritiva, é a escolha perfeita para um café da manhã saudável.",
     beneficios: ["Mistura de cereais", "Energia"],
     comoUsar: "Iogurte, frutas, leite.",
+    receita: "Tigela de café da manhã: misture iogurte natural, frutas picadas, 3 colheres (sopa) de granola e um fio de mel.",
     keywords: "granola, cereal, café da manhã, mix natural",
     metaTitle: "Granola Natural | Amanda Produtos Naturais",
     metaDesc: "Granola natural mix de cereais, frutas secas e oleaginosas. Crocante e nutritiva para café da manhã.",
@@ -239,6 +258,7 @@ const produtosBase = [
     descLonga: "O mix de castanhas Amanda é uma combinação selecionada das melhores oleaginosas, perfeito para um lanche nutritivo e saboroso entre as refeições.",
     beneficios: ["Combinação nutritiva", "Energia natural"],
     comoUsar: "Lanches, snacks.",
+    receita: "Mix energético: combine o mix de castanhas com frutas secas e lascas de coco. Leve na bolsa para um lanche prático e saudável.",
     keywords: "mix de castanhas, oleaginosas, lanche natural",
     metaTitle: "Mix de Castanhas Natural | Amanda Produtos Naturais",
     metaDesc: "Mix de castanhas natural combinação nutritiva de oleaginosas selecionadas. Lanche saudável e saboroso.",
@@ -294,8 +314,18 @@ function openModal(id) {
   document.getElementById('modalLegenda').textContent = p.imgLegenda;
   document.getElementById('modalTitle').textContent = p.nome;
   document.getElementById('modalDesc').textContent = p.descLonga;
+
   document.getElementById('modalBeneficios').querySelector('ul').innerHTML = p.beneficios.map(b => `<li>${escapeHtml(b)}</li>`).join('');
   document.getElementById('modalUso').querySelector('p').textContent = p.comoUsar;
+
+  const receitaContainer = document.getElementById('modalReceita');
+  const receitaP = receitaContainer.querySelector('p');
+  if (p.receita) {
+    receitaContainer.style.display = '';
+    receitaP.textContent = p.receita;
+  } else {
+    receitaContainer.style.display = 'none';
+  }
 
   const faqContainer = document.getElementById('modalFAQ');
   const dl = faqContainer.querySelector('dl');
