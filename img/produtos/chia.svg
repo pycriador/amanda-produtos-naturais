@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="300" viewBox="0 0 400 300">
+  <defs>
+    <linearGradient id="g" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#2E7D32"/>
+      <stop offset="100%" stop-color="#A5D6A7"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="300" fill="url(#g)"/>
+  <circle cx="200" cy="130" r="60" fill="white" opacity="0.12"/>
+  <rect x="60" y="200" width="280" height="4" rx="2" fill="white" opacity="0.1"/>
+  <rect x="100" y="215" width="200" height="4" rx="2" fill="white" opacity="0.08"/>
+  <text x="200" y="248" text-anchor="middle" font-family="Georgia,serif" font-size="20" fill="white" font-weight="bold">Chia</text>
+  <text x="200" y="272" text-anchor="middle" font-family="Georgia,serif" font-size="12" fill="#E8F5E9">Amanda Produtos Naturais</text>
+</svg>
