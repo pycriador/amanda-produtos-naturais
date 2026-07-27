@@ -382,7 +382,7 @@ ul { list-style: none; }
   justify-content: center;
   text-align: center;
   background: linear-gradient(135deg, #1B5E20, #2E7D32, #66BB6A);
-  background: url('../img/hero.jpg') center center / cover no-repeat, linear-gradient(135deg, #1B5E20, #2E7D32, #66BB6A);
+  background: url('../img/hero.svg') center center / cover no-repeat, linear-gradient(135deg, #1B5E20, #2E7D32, #66BB6A);
   color: var(--white);
   margin-top: calc(-1 * var(--header-h));
   padding-top: var(--header-h);
@@ -1017,12 +1017,12 @@ ul { list-style: none; }
   inset: 0;
   z-index: 2000;
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0.3s ease;
-  padding: 0;
+  padding: 16px;
 }
 
 .modal.open {
@@ -1039,50 +1039,45 @@ ul { list-style: none; }
 .modal-content {
   position: relative;
   background: var(--white);
-  border-radius: var(--radius) var(--radius) 0 0;
-  max-width: 100%;
+  border-radius: var(--radius);
+  max-width: 500px;
   width: 100%;
-  max-height: 92vh;
-  max-height: 92dvh;
+  max-height: 90vh;
+  max-height: 90dvh;
   overflow-y: auto;
-  transform: translateY(100%);
+  transform: scale(0.95) translateY(8px);
   transition: transform 0.3s ease;
-  padding-top: env(safe-area-inset-top, 0);
-  padding-bottom: env(safe-area-inset-bottom, 0);
 }
 
 .modal.open .modal-content {
-  transform: translateY(0);
+  transform: scale(1) translateY(0);
 }
 
 .modal-close {
-  position: sticky;
-  top: 0;
-  float: right;
-  background: none;
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.06);
   border: none;
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   cursor: pointer;
   color: var(--text);
-  z-index: 1;
+  z-index: 2;
   line-height: 1;
-  padding: 8px 16px;
-  min-height: 48px;
-  min-width: 48px;
+  width: 40px;
+  height: 40px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 8px;
   border-radius: 50%;
-  background: rgba(0,0,0,0.05);
+  transition: background 0.2s ease;
 }
 
 .modal-body {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 16px;
-  padding: 0 20px 20px;
-  margin-top: -8px;
+  gap: 20px;
+  padding: 48px 24px 32px;
 }
 
 .modal-body figure {
@@ -1114,7 +1109,7 @@ ul { list-style: none; }
 .modal-info p {
   color: var(--text-light);
   margin-bottom: 12px;
-  line-height: 1.6;
+  line-height: 1.7;
   font-size: 0.95rem;
 }
 
@@ -1123,7 +1118,7 @@ ul { list-style: none; }
   font-size: 1rem;
   color: var(--primary);
   margin-bottom: 8px;
-  margin-top: 16px;
+  margin-top: 20px;
 }
 
 .modal-info ul {
@@ -1144,7 +1139,7 @@ ul { list-style: none; }
 .modal-faq dt {
   font-weight: 600;
   color: var(--text);
-  margin-top: 12px;
+  margin-top: 16px;
   font-size: 0.9rem;
 }
 
@@ -1152,6 +1147,7 @@ ul { list-style: none; }
   color: var(--text-light);
   margin: 4px 0 0 0;
   font-size: 0.9rem;
+  line-height: 1.6;
 }
 
 /* ========== 361px+ ========== */
@@ -1192,30 +1188,18 @@ ul { list-style: none; }
   .cta-content h2 { font-size: 1.6rem; }
 
   .modal-content {
-    border-radius: var(--radius);
-    max-width: 500px;
+    max-width: 600px;
     max-height: 85vh;
     max-height: 85dvh;
   }
 
-  .modal {
-    align-items: center;
-    padding: 16px;
-  }
-
-  .modal-close {
-    position: absolute;
-    top: 12px;
-    right: 16px;
-    float: none;
-    background: none;
-    margin: 0;
-  }
-
   .modal-body {
-    grid-template-columns: 1fr;
-    padding: 0 24px 24px;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    padding: 48px 32px 32px;
   }
+
+  .modal-body img { max-height: 280px; }
 
   .contato-form .btn { width: auto; }
 
@@ -1347,16 +1331,8 @@ ul { list-style: none; }
   .social-links { align-items: flex-start; }
 
   .modal-content {
-    max-width: 600px;
+    max-width: 640px;
   }
-
-  .modal-body {
-    grid-template-columns: 1fr 1fr;
-    gap: 24px;
-    padding: 0 32px 32px;
-  }
-
-  .modal-body img { max-height: 280px; }
 
   .contato-canais .btn { width: auto; }
 
