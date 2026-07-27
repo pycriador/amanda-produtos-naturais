@@ -382,7 +382,7 @@ ul { list-style: none; }
   justify-content: center;
   text-align: center;
   background: linear-gradient(135deg, #1B5E20, #2E7D32, #66BB6A);
-  background: url('../img/hero.svg') center center / cover no-repeat, linear-gradient(135deg, #1B5E20, #2E7D32, #66BB6A);
+  background: url('../img/hero.jpg') center center / cover no-repeat, linear-gradient(135deg, #1B5E20, #2E7D32, #66BB6A);
   color: var(--white);
   margin-top: calc(-1 * var(--header-h));
   padding-top: var(--header-h);

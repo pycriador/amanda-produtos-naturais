@@ -1,7 +1,7 @@
 const produtosBase = [
   {
     id: 1, nome: "Açafrão (Cúrcuma)", slug: "acafrao-em-po", categoria: "Temperos",
-    img: "img/produtos/acafrao.svg", imgAlt: "Açafrão em pó natural utilizado como tempero para arroz, carnes, legumes e molhos", imgTitle: "Açafrão em pó Amanda Produtos Naturais", imgLegenda: "Açafrão natural rico em sabor",
+    img: "img/produtos/acafrao.jpg", imgAlt: "Açafrão em pó natural utilizado como tempero para arroz, carnes, legumes e molhos", imgTitle: "Açafrão em pó Amanda Produtos Naturais", imgLegenda: "Açafrão natural rico em sabor",
     desc: "Tempero de cor intensa utilizado na culinária.",
     descLonga: "O açafrão, também conhecido como cúrcuma, é um tempero de cor alaranjada intensa amplamente utilizado na culinária brasileira e internacional. Rico em curcumina, um poderoso antioxidante natural, o açafrão da Amanda é selecionado manualmente para garantir frescor e aroma incomparáveis.",
     beneficios: ["Antioxidante natural", "Rico em curcumina", "Auxilia alimentação equilibrada", "Cor e sabor únicos"],
@@ -16,7 +16,7 @@ const produtosBase = [
   },
   {
     id: 2, nome: "Orégano", slug: "oregano", categoria: "Temperos",
-    img: "img/produtos/oregano.svg", imgAlt: "Orégano desidratado natural para tempero", imgTitle: "Orégano Amanda Produtos Naturais", imgLegenda: "Orégano selecionado",
+    img: "img/produtos/oregano.jpg", imgAlt: "Orégano desidratado natural para tempero", imgTitle: "Orégano Amanda Produtos Naturais", imgLegenda: "Orégano selecionado",
     desc: "Erva aromática tradicional.",
     descLonga: "O orégano é uma erva aromática tradicional da culinária mediterrânea, conhecida por seu sabor marcante e versatilidade na cozinha. Nosso orégano é cultivado e desidratado com cuidado para preservar todo o seu aroma e sabor.",
     beneficios: ["Sabor intenso", "Rico em compostos naturais", "Versátil na cozinha"],
@@ -30,7 +30,7 @@ const produtosBase = [
   },
   {
     id: 3, nome: "Canela em pó", slug: "canela-em-po", categoria: "Temperos",
-    img: "img/produtos/canela.svg", imgAlt: "Canela em pó natural aromática", imgTitle: "Canela em Pó Amanda Produtos Naturais", imgLegenda: "Canela em pó aromática",
+    img: "img/produtos/canela.jpg", imgAlt: "Canela em pó natural aromática", imgTitle: "Canela em Pó Amanda Produtos Naturais", imgLegenda: "Canela em pó aromática",
     desc: "Tempero aromático e versátil.",
     descLonga: "A canela em pó é um dos temperos mais versáteis da culinária, perfeita para preparos doces e salgados. Com aroma agradável e sabor marcante, nossa canela é moída a partir de paus selecionados.",
     beneficios: ["Aroma agradável", "Excelente para doces", "Versátil"],
@@ -42,7 +42,7 @@ const produtosBase = [
   },
   {
     id: 4, nome: "Gengibre", slug: "gengibre", categoria: "Temperos",
-    img: "img/produtos/gengibre.svg", imgAlt: "Gengibre em pó natural para chás e receitas", imgTitle: "Gengibre Amanda Produtos Naturais", imgLegenda: "Gengibre selecionado",
+    img: "img/produtos/gengibre.jpg", imgAlt: "Gengibre em pó natural para chás e receitas", imgTitle: "Gengibre Amanda Produtos Naturais", imgLegenda: "Gengibre selecionado",
     desc: "Raiz picante e aromática.",
     descLonga: "O gengibre é uma raiz de sabor picante e aroma marcante, amplamente utilizado na culinária e em preparos medicinais. Rico em compostos bioativos, é perfeito para chás, sucos e receitas.",
     beneficios: ["Sabor picante", "Muito utilizado em chás", "Versátil"],
@@ -54,7 +54,7 @@ const produtosBase = [
   },
   {
     id: 5, nome: "Chia", slug: "chia", categoria: "Sementes",
-    img: "img/produtos/chia.svg", imgAlt: "Chia em grãos natural fonte de fibras e ômega 3", imgTitle: "Chia Amanda Produtos Naturais", imgLegenda: "Chia rica em nutrientes",
+    img: "img/produtos/chia.jpg", imgAlt: "Chia em grãos natural fonte de fibras e ômega 3", imgTitle: "Chia Amanda Produtos Naturais", imgLegenda: "Chia rica em nutrientes",
     desc: "Semente rica em nutrientes.",
     descLonga: "A chia é uma semente milenar reconhecida por seu alto valor nutricional. Fonte de fibras, ômega 3 vegetal e proteínas, é um superalimento versátil que pode ser incorporado em diversas preparações.",
     beneficios: ["Fonte de fibras", "Fonte de ômega 3 vegetal", "Superalimento"],
@@ -66,7 +66,7 @@ const produtosBase = [
   },
   {
     id: 6, nome: "Linhaça Dourada", slug: "linhaca-dourada", categoria: "Sementes",
-    img: "img/produtos/linhaca.svg", imgAlt: "Linhaça dourada natural rica em fibras", imgTitle: "Linhaça Dourada Amanda Produtos Naturais", imgLegenda: "Linhaça dourada nutritiva",
+    img: "img/produtos/linhaca.jpg", imgAlt: "Linhaça dourada natural rica em fibras", imgTitle: "Linhaça Dourada Amanda Produtos Naturais", imgLegenda: "Linhaça dourada nutritiva",
     desc: "Semente nutritiva e versátil.",
     descLonga: "A linhaça dourada é uma semente rica em fibras e nutrientes essenciais. Perfeita para enriquecer pães, bolos, vitaminas e outras preparações, é uma excelente fonte de saúde.",
     beneficios: ["Fibras", "Sementes nutritivas", "Versátil"],
@@ -78,7 +78,7 @@ const produtosBase = [
   },
   {
     id: 7, nome: "Quinoa", slug: "quinoa", categoria: "Grãos",
-    img: "img/produtos/quinoa.svg", imgAlt: "Quinoa em grãos natural rica em proteínas vegetais", imgTitle: "Quinoa Amanda Produtos Naturais", imgLegenda: "Quinoa grão nutritivo",
+    img: "img/produtos/quinoa.jpg", imgAlt: "Quinoa em grãos natural rica em proteínas vegetais", imgTitle: "Quinoa Amanda Produtos Naturais", imgLegenda: "Quinoa grão nutritivo",
     desc: "Grão rico em proteínas.",
     descLonga: "A quinoa é um grão completo, rico em proteínas vegetais de alta qualidade, fibras e minerais. Considerada um superalimento, é uma excelente alternativa para uma alimentação equilibrada.",
     beneficios: ["Rica em proteínas vegetais", "Superalimento"],
@@ -90,7 +90,7 @@ const produtosBase = [
   },
   {
     id: 8, nome: "Aveia", slug: "aveia", categoria: "Grãos",
-    img: "img/produtos/aveia.svg", imgAlt: "Aveia em flocos natural rica em fibras", imgTitle: "Aveia Amanda Produtos Naturais", imgLegenda: "Aveia para café da manhã",
+    img: "img/produtos/aveia.jpg", imgAlt: "Aveia em flocos natural rica em fibras", imgTitle: "Aveia Amanda Produtos Naturais", imgLegenda: "Aveia para café da manhã",
     desc: "Cereal completo e nutritivo.",
     descLonga: "A aveia é um cereal completo, rico em fibras solúveis que auxiliam o bom funcionamento do organismo. Perfeita para o café da manhã e diversas preparações.",
     beneficios: ["Fibras", "Muito versátil", "Café da manhã"],
@@ -102,7 +102,7 @@ const produtosBase = [
   },
   {
     id: 9, nome: "Castanha-do-Pará", slug: "castanha-do-para", categoria: "Oleaginosas",
-    img: "img/produtos/castanha-para.svg", imgAlt: "Castanha-do-Pará natural rica em selênio", imgTitle: "Castanha-do-Pará Amanda Produtos Naturais", imgLegenda: "Castanha-do-Pará selecionada",
+    img: "img/produtos/castanha-para.jpg", imgAlt: "Castanha-do-Pará natural rica em selênio", imgTitle: "Castanha-do-Pará Amanda Produtos Naturais", imgLegenda: "Castanha-do-Pará selecionada",
     desc: "Oleaginosa da Amazônia.",
     descLonga: "A castanha-do-Pará é uma oleaginosa típica da Amazônia brasileira, reconhecida por seu alto teor de selênio, um mineral essencial para o organismo. Crocante e saborosa.",
     beneficios: ["Rica em selênio", "Fonte de energia"],
@@ -114,7 +114,7 @@ const produtosBase = [
   },
   {
     id: 10, nome: "Nozes", slug: "nozes", categoria: "Oleaginosas",
-    img: "img/produtos/nozes.svg", imgAlt: "Nozes natural rica em gorduras boas", imgTitle: "Nozes Amanda Produtos Naturais", imgLegenda: "Nozes selecionadas",
+    img: "img/produtos/nozes.jpg", imgAlt: "Nozes natural rica em gorduras boas", imgTitle: "Nozes Amanda Produtos Naturais", imgLegenda: "Nozes selecionadas",
     desc: "Oleaginosas saborosas.",
     descLonga: "As nozes são oleaginosas ricas em gorduras boas (ômega 3), antioxidantes e nutrientes essenciais. Perfeitas como snack saudável ou para enriquecer sobremesas.",
     beneficios: ["Gorduras boas", "Antioxidantes"],
@@ -126,7 +126,7 @@ const produtosBase = [
   },
   {
     id: 11, nome: "Amêndoas", slug: "amendoas", categoria: "Oleaginosas",
-    img: "img/produtos/amendoas.svg", imgAlt: "Amêndoas natural rica em proteínas e fibras", imgTitle: "Amêndoas Amanda Produtos Naturais", imgLegenda: "Amêndoas crocantes",
+    img: "img/produtos/amendoas.jpg", imgAlt: "Amêndoas natural rica em proteínas e fibras", imgTitle: "Amêndoas Amanda Produtos Naturais", imgLegenda: "Amêndoas crocantes",
     desc: "Oleaginosa crocante.",
     descLonga: "As amêndoas são oleaginosas crocantes, ricas em proteínas, fibras e gorduras boas. Um snack nutritivo e versátil para qualquer momento do dia.",
     beneficios: ["Proteínas", "Fibras"],
@@ -138,7 +138,7 @@ const produtosBase = [
   },
   {
     id: 12, nome: "Uva Passa", slug: "uva-passa", categoria: "Frutas Secas",
-    img: "img/produtos/uva-passa.svg", imgAlt: "Uva passa natural fonte de energia", imgTitle: "Uva Passa Amanda Produtos Naturais", imgLegenda: "Uva passa doce",
+    img: "img/produtos/uva-passa.jpg", imgAlt: "Uva passa natural fonte de energia", imgTitle: "Uva Passa Amanda Produtos Naturais", imgLegenda: "Uva passa doce",
     desc: "Fruta desidratada e doce.",
     descLonga: "A uva passa é uma fruta desidratada naturalmente doce, rica em energia natural e nutrientes. Perfeita para arroz, bolos, pães e diversas receitas.",
     beneficios: ["Energia natural", "Versátil"],
@@ -150,7 +150,7 @@ const produtosBase = [
   },
   {
     id: 13, nome: "Hibisco", slug: "hibisco", categoria: "Ervas Medicinais",
-    img: "img/produtos/hibisco.svg", imgAlt: "Hibisco seco natural para chá aromático", imgTitle: "Hibisco Amanda Produtos Naturais", imgLegenda: "Hibisco para infusão",
+    img: "img/produtos/hibisco.jpg", imgAlt: "Hibisco seco natural para chá aromático", imgTitle: "Hibisco Amanda Produtos Naturais", imgLegenda: "Hibisco para infusão",
     desc: "Flor utilizada em infusões.",
     descLonga: "O hibisco é uma flor de cor vibrante utilizada em infusões e chás aromáticos. Conhecido por seu sabor levemente ácido e refrescante, é uma excelente opção para bebidas saudáveis.",
     beneficios: ["Chá aromático", "Refrescante"],
@@ -162,7 +162,7 @@ const produtosBase = [
   },
   {
     id: 14, nome: "Camomila", slug: "camomila", categoria: "Ervas Medicinais",
-    img: "img/produtos/camomila.svg", imgAlt: "Camomila seca natural para chá tradicional", imgTitle: "Camomila Amanda Produtos Naturais", imgLegenda: "Camomila para infusão",
+    img: "img/produtos/camomila.jpg", imgAlt: "Camomila seca natural para chá tradicional", imgTitle: "Camomila Amanda Produtos Naturais", imgLegenda: "Camomila para infusão",
     desc: "Erva tradicional para chás.",
     descLonga: "A camomila é uma erva tradicionalmente utilizada em infusões calmantes. Com aroma suave e sabor delicado, é a escolha perfeita para momentos de relaxamento.",
     beneficios: ["Chá tradicional", "Calmante"],
@@ -174,7 +174,7 @@ const produtosBase = [
   },
   {
     id: 15, nome: "Erva-doce", slug: "erva-doce", categoria: "Ervas Medicinais",
-    img: "img/produtos/erva-doce.svg", imgAlt: "Erva-doce natural para chás de sabor suave", imgTitle: "Erva-doce Amanda Produtos Naturais", imgLegenda: "Erva-doce aromática",
+    img: "img/produtos/erva-doce.jpg", imgAlt: "Erva-doce natural para chás de sabor suave", imgTitle: "Erva-doce Amanda Produtos Naturais", imgLegenda: "Erva-doce aromática",
     desc: "Erva de sabor suave.",
     descLonga: "A erva-doce é uma planta aromática de sabor suave e adocicado, amplamente utilizada em chás e infusões. Perfeita para ser consumida após as refeições.",
     beneficios: ["Sabor suave", "Digestiva"],
@@ -186,7 +186,7 @@ const produtosBase = [
   },
   {
     id: 16, nome: "Alecrim", slug: "alecrim", categoria: "Temperos",
-    img: "img/produtos/alecrim.svg", imgAlt: "Alecrim desidratado natural tempero aromático", imgTitle: "Alecrim Amanda Produtos Naturais", imgLegenda: "Alecrim aromático",
+    img: "img/produtos/alecrim.jpg", imgAlt: "Alecrim desidratado natural tempero aromático", imgTitle: "Alecrim Amanda Produtos Naturais", imgLegenda: "Alecrim aromático",
     desc: "Erva aromática marcante.",
     descLonga: "O alecrim é uma erva aromática de sabor marcante, indispensável na culinária para carnes, batatas e assados. Cultivado e desidratado para preservar seu aroma inconfundível.",
     beneficios: ["Tempero aromático", "Sabor marcante"],
@@ -198,7 +198,7 @@ const produtosBase = [
   },
   {
     id: 17, nome: "Páprica Defumada", slug: "paprica-defumada", categoria: "Temperos",
-    img: "img/produtos/paprica.svg", imgAlt: "Páprica defumada natural tempero marcante", imgTitle: "Páprica Defumada Amanda Produtos Naturais", imgLegenda: "Páprica defumada saborosa",
+    img: "img/produtos/paprica.jpg", imgAlt: "Páprica defumada natural tempero marcante", imgTitle: "Páprica Defumada Amanda Produtos Naturais", imgLegenda: "Páprica defumada saborosa",
     desc: "Tempero de sabor marcante.",
     descLonga: "A páprica defumada é um tempero de sabor marcante e aroma inconfundível, obtido a partir da moagem de pimentões defumados. Perfeita para carnes e legumes.",
     beneficios: ["Sabor marcante", "Aroma defumado"],
@@ -210,7 +210,7 @@ const produtosBase = [
   },
   {
     id: 18, nome: "Pimenta-do-Reino", slug: "pimenta-do-reino", categoria: "Temperos",
-    img: "img/produtos/pimenta-reino.svg", imgAlt: "Pimenta-do-reino em pó natural", imgTitle: "Pimenta-do-Reino Amanda Produtos Naturais", imgLegenda: "Pimenta-do-reino moída",
+    img: "img/produtos/pimenta-reino.jpg", imgAlt: "Pimenta-do-reino em pó natural", imgTitle: "Pimenta-do-Reino Amanda Produtos Naturais", imgLegenda: "Pimenta-do-reino moída",
     desc: "Tempero clássico e versátil.",
     descLonga: "A pimenta-do-reino é o tempero mais utilizado no mundo, conhecida por seu sabor picante e versatilidade. Moída a partir de grãos selecionados.",
     beneficios: ["Realça o sabor", "Versátil"],
@@ -222,7 +222,7 @@ const produtosBase = [
   },
   {
     id: 19, nome: "Granola", slug: "granola", categoria: "Cereais",
-    img: "img/produtos/granola.svg", imgAlt: "Granola natural mix de cereais e frutas", imgTitle: "Granola Amanda Produtos Naturais", imgLegenda: "Granola crocante",
+    img: "img/produtos/granola.jpg", imgAlt: "Granola natural mix de cereais e frutas", imgTitle: "Granola Amanda Produtos Naturais", imgLegenda: "Granola crocante",
     desc: "Mistura de cereais e frutas.",
     descLonga: "A granola Amanda é uma mistura selecionada de cereais, frutas secas e oleaginosas. Crocante e nutritiva, é a escolha perfeita para um café da manhã saudável.",
     beneficios: ["Mistura de cereais", "Energia"],
@@ -234,7 +234,7 @@ const produtosBase = [
   },
   {
     id: 20, nome: "Mix de Castanhas", slug: "mix-de-castanhas", categoria: "Oleaginosas",
-    img: "img/produtos/mix-castanhas.svg", imgAlt: "Mix de castanhas natural combinação nutritiva", imgTitle: "Mix de Castanhas Amanda Produtos Naturais", imgLegenda: "Mix de castanhas",
+    img: "img/produtos/mix-castanhas.jpg", imgAlt: "Mix de castanhas natural combinação nutritiva", imgTitle: "Mix de Castanhas Amanda Produtos Naturais", imgLegenda: "Mix de castanhas",
     desc: "Combinação de oleaginosas.",
     descLonga: "O mix de castanhas Amanda é uma combinação selecionada das melhores oleaginosas, perfeito para um lanche nutritivo e saboroso entre as refeições.",
     beneficios: ["Combinação nutritiva", "Energia natural"],
