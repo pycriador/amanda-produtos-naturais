@@ -1,5 +1,7 @@
 # Amanda Produtos Naturais
 
+**🌐 [pycriador.github.io/amanda-produtos-naturais](https://pycriador.github.io/amanda-produtos-naturais/)**
+
 Landing page profissional para loja de produtos naturais, temperos, grãos, ervas medicinais e alimentos saudáveis. Desenvolvida com HTML semântico, CSS moderno e JavaScript vanilla, focando em performance, acessibilidade e SEO.
 
 ## Funcionalidades
