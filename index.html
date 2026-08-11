@@ -30,6 +30,7 @@
   <link rel="preload" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&family=Open+Sans:wght@400;600&display=swap" as="style">
 
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="vendor/leaflet.css">
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
@@ -55,6 +56,7 @@
           <li><a href="#produtos">Produtos</a></li>
           <li><a href="#depoimentos">Depoimentos</a></li>
           <li><a href="#como-comprar">Como comprar</a></li>
+          <li><a href="#lojas">Lojas</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
         <div class="nav-overlay" id="navOverlay"></div>
@@ -229,6 +231,33 @@
       </div>
     </section>
 
+    <section id="lojas" class="section lojas" aria-labelledby="lojas-title">
+      <div class="container">
+        <h2 id="lojas-title" class="section-title fade-in">Nossas Lojas</h2>
+        <p class="section-subtitle fade-in">Encontre a loja Amanda mais próxima de você</p>
+        <div class="lojas-grid">
+          <article class="loja-card fade-in-up">
+            <h3>Loja Paraisópolis</h3>
+            <p class="loja-address">Rua Melchior Giola, 300 &mdash; Paraisópolis, São Paulo - SP, 05664-000</p>
+            <div class="loja-map" id="mapaParaisopolis" role="img" aria-label="Mapa da loja Amanda em Paraisópolis, São Paulo"></div>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Rua+Melchior+Giola+300+Paraisopolis+Sao+Paulo+SP" class="btn btn-outline" target="_blank" rel="noopener">Como chegar</a>
+          </article>
+          <article class="loja-card fade-in-up">
+            <h3>Loja Embu das Artes</h3>
+            <p class="loja-address">Av. Fernando Fernandes, 800 &mdash; Lj 11 e 12, Jardim Castilho, Embu das Artes - SP, 06810-000</p>
+            <div class="loja-map" id="mapaEmbu" role="img" aria-label="Mapa da loja Amanda em Embu das Artes, São Paulo"></div>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Av+Fernando+Fernandes+800+Embu+das+Artes+SP" class="btn btn-outline" target="_blank" rel="noopener">Como chegar</a>
+          </article>
+          <article class="loja-card fade-in-up">
+            <h3>Loja Taboão da Serra</h3>
+            <p class="loja-address">Estr. Kizaemon Takeuti, 2491 &mdash; Parque São Joaquim, Taboão da Serra - SP, 06775-003</p>
+            <div class="loja-map" id="mapaTaboao" role="img" aria-label="Mapa da loja Amanda em Taboão da Serra, São Paulo"></div>
+            <a href="https://www.google.com/maps/dir/?api=1&destination=Estrada+Kizaemon+Takeuti+2491+Taboao+da+Serra+SP" class="btn btn-outline" target="_blank" rel="noopener">Como chegar</a>
+          </article>
+        </div>
+      </div>
+    </section>
+
     <section id="contato" class="section contato" aria-labelledby="contato-title">
       <div class="container">
         <h2 id="contato-title" class="section-title fade-in">Entre em contato</h2>
@@ -305,6 +334,7 @@
           <li><a href="#hero">Início</a></li>
           <li><a href="#produtos">Produtos</a></li>
           <li><a href="#beneficios">Benefícios</a></li>
+          <li><a href="#lojas">Lojas</a></li>
           <li><a href="#contato">Contato</a></li>
         </ul>
       </nav>
@@ -398,12 +428,53 @@
     "email": "contato@amandanaturais.com.br",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "Rua dos Produtos Naturais, 100",
+      "streetAddress": "Rua Melchior Giola, 300",
       "addressLocality": "São Paulo",
       "addressRegion": "SP",
-      "postalCode": "01000-000",
+      "postalCode": "05664-000",
       "addressCountry": "BR"
     },
+    "location": [
+      {
+        "@type": "Place",
+        "name": "Loja Paraisópolis",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Rua Melchior Giola, 300",
+          "addressLocality": "Paraisópolis, São Paulo",
+          "addressRegion": "SP",
+          "postalCode": "05664-000",
+          "addressCountry": "BR"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": -23.6167, "longitude": -46.7262 }
+      },
+      {
+        "@type": "Place",
+        "name": "Loja Embu das Artes",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Av. Fernando Fernandes, 800, Lj 11 e 12",
+          "addressLocality": "Jardim Castilho, Embu das Artes",
+          "addressRegion": "SP",
+          "postalCode": "06810-000",
+          "addressCountry": "BR"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": -23.6417, "longitude": -46.8053 }
+      },
+      {
+        "@type": "Place",
+        "name": "Loja Taboão da Serra",
+        "address": {
+          "@type": "PostalAddress",
+          "streetAddress": "Estr. Kizaemon Takeuti, 2491",
+          "addressLocality": "Parque São Joaquim, Taboão da Serra",
+          "addressRegion": "SP",
+          "postalCode": "06775-003",
+          "addressCountry": "BR"
+        },
+        "geo": { "@type": "GeoCoordinates", "latitude": -23.6338, "longitude": -46.7777 }
+      }
+    ],
     "openingHoursSpecification": [
       {
         "@type": "OpeningHoursSpecification",
@@ -426,6 +497,8 @@
   }
   </script>
 
+  <script src="vendor/leaflet.js"></script>
   <script src="js/script.js" defer></script>
+  <script src="js/maps.js" defer></script>
 </body>
 </html>

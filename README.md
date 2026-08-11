@@ -13,6 +13,7 @@ Landing page profissional para loja de produtos naturais, temperos, grãos, erva
 - **Formulário de contato** — Validação em tempo real com máscara de telefone
 - **WhatsApp flutuante** — Botão de contato direto fixo na tela
 - **FAQ interativo** — Seção de perguntas frequentes com accordion
+- **Mapas das lojas** — 3 mini mapas interativos com Leaflet + OpenStreetMap, com botão "Como chegar"
 - **Galeria de depoimentos** — Cards com avaliações de clientes
 - **Scroll animado** — Animações suaves ao rolar a página (Intersection Observer)
 - **Breadcrumb** — Navegação estrutural para SEO
@@ -24,7 +25,8 @@ Landing page profissional para loja de produtos naturais, temperos, grãos, erva
 
 - **HTML5** — Semântico e validado pelo W3C
 - **CSS3** — Variáveis, Grid, Flexbox, Media Queries, animações
-- **JavaScript (Vanilla ES6+)** — Sem dependências externas
+- **JavaScript (Vanilla ES6+)** — Sem dependências externas (exceto Leaflet)
+- **Leaflet + OpenStreetMap** — Mapas interativos gratuitos, sem API key, 100% estáticos
 - **Google Fonts** — Poppins (títulos) + Open Sans (corpo)
 - **Schema.org** — Structured data para motores de busca
 - **Google Tag Manager** — Pronto para analytics
@@ -38,7 +40,9 @@ Landing page profissional para loja de produtos naturais, temperos, grãos, erva
 ├── css/
 │   └── style.css           # Estilos completos (responsive + animations)
 ├── js/
-│   └── script.js           # Lógica JS (produtos, modal, formulário, menu)
+│   ├── script.js           # Lógica JS (produtos, modal, formulário, menu)
+│   └── maps.js             # Inicialização dos mapas das lojas (Leaflet)
+├── vendor/                 # Leaflet local (CSS, JS e imagens dos marcadores)
 └── img/
     ├── folha.png           # Logo
     ├── hero.svg            # Background do hero

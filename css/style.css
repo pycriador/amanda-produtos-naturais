@@ -660,6 +660,59 @@ ul { list-style: none; }
   line-height: 1.5;
 }
 
+.lojas {
+  background: var(--bg);
+}
+
+.lojas-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.loja-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 20px;
+  box-shadow: var(--shadow);
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  text-align: center;
+  transition: box-shadow 0.2s ease;
+}
+
+.loja-card:active {
+  box-shadow: var(--shadow-hover);
+}
+
+.loja-card h3 {
+  font-family: var(--font-title);
+  font-size: 1.1rem;
+  color: var(--primary);
+  margin-bottom: 4px;
+}
+
+.loja-address {
+  color: var(--text-light);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.loja-map {
+  width: 100%;
+  height: 220px;
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  z-index: 0;
+}
+
+.loja-card .btn {
+  width: 100%;
+  margin-top: auto;
+}
+
 .faq {
   background: var(--bg);
 }
@@ -1195,6 +1248,11 @@ ul { list-style: none; }
     gap: 20px;
   }
 
+  .lojas-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
   .passos-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
@@ -1327,6 +1385,11 @@ ul { list-style: none; }
   }
 
   .depoimentos-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+  }
+
+  .lojas-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 24px;
   }
