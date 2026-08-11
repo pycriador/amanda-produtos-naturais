@@ -281,15 +281,36 @@ function enrichProdutos() {
 
 const produtos = enrichProdutos();
 
+const observerAnimacoes = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) entry.target.classList.add('visible');
+  });
+}, { threshold: 0.15 });
+
+function observarAnimacao(el) {
+  observerAnimacoes.observe(el);
+}
+
 function escapeHtml(str) {
   const div = document.createElement('div');
   div.textContent = str;
   return div.innerHTML;
 }
 
+const PRODUTOS_POR_PAGINA = 5;
+let paginaAtual = 1;
+
 function renderProdutos() {
   const grid = document.getElementById('produtosGrid');
-  grid.innerHTML = produtos.map(p => `
+  const totalPaginas = Math.ceil(produtos.length / PRODUTOS_POR_PAGINA);
+
+  if (paginaAtual > totalPaginas) paginaAtual = totalPaginas;
+  if (paginaAtual < 1) paginaAtual = 1;
+
+  const inicio = (paginaAtual - 1) * PRODUTOS_POR_PAGINA;
+  const itensPagina = produtos.slice(inicio, inicio + PRODUTOS_POR_PAGINA);
+
+  grid.innerHTML = itensPagina.map(p => `
     <article class="produto-card fade-in-up" data-id="${p.id}">
       <img src="${escapeHtml(p.img)}" alt="${escapeHtml(p.imgAlt)}" title="${escapeHtml(p.imgTitle)}" loading="lazy" decoding="async" width="400" height="300">
       <div class="card-body">
@@ -299,6 +320,12 @@ function renderProdutos() {
       </div>
     </article>
   `).join('');
+
+  document.getElementById('pagInfo').textContent = `${paginaAtual} de ${totalPaginas}`;
+  document.getElementById('pagAnterior').disabled = paginaAtual <= 1;
+  document.getElementById('pagProximo').disabled = paginaAtual >= totalPaginas;
+
+  grid.querySelectorAll('.fade-in-up').forEach(el => observarAnimacao(el));
 }
 
 function openModal(id) {
@@ -438,6 +465,23 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
+  document.getElementById('pagAnterior').addEventListener('click', () => {
+    if (paginaAtual > 1) {
+      paginaAtual--;
+      renderProdutos();
+      window.scrollTo({ top: document.getElementById('produtos').offsetTop - 90, behavior: 'smooth' });
+    }
+  });
+
+  document.getElementById('pagProximo').addEventListener('click', () => {
+    const totalPaginas = Math.ceil(produtos.length / PRODUTOS_POR_PAGINA);
+    if (paginaAtual < totalPaginas) {
+      paginaAtual++;
+      renderProdutos();
+      window.scrollTo({ top: document.getElementById('produtos').offsetTop - 90, behavior: 'smooth' });
+    }
+  });
+
   document.querySelector('.modal-overlay').addEventListener('click', closeModal);
   document.querySelector('.modal-close').addEventListener('click', closeModal);
 
@@ -509,13 +553,7 @@ document.addEventListener('DOMContentLoaded', () => {
     header.classList.toggle('scrolled', window.scrollY > 80);
   }, { passive: true });
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('visible');
-    });
-  }, { threshold: 0.15 });
-
-  document.querySelectorAll('.fade-in, .fade-in-up').forEach(el => observer.observe(el));
+    document.querySelectorAll('.fade-in, .fade-in-up').forEach(el => observarAnimacao(el));
 
   const telInput = document.getElementById('formTelefone');
   telInput.addEventListener('input', () => {

@@ -561,6 +561,50 @@ ul { list-style: none; }
   font-size: 0.95rem;
 }
 
+.paginacao {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.pag-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  border: 2px solid var(--primary);
+  background: var(--white);
+  color: var(--primary);
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.pag-btn:active:not(:disabled) {
+  background: var(--primary);
+  color: var(--white);
+  transform: scale(0.94);
+}
+
+.pag-btn:disabled {
+  border-color: #C8C8C8;
+  color: #C8C8C8;
+  cursor: not-allowed;
+}
+
+.pag-info {
+  font-family: var(--font-body);
+  font-weight: 600;
+  color: var(--text-light);
+  font-size: 0.95rem;
+  min-width: 60px;
+  text-align: center;
+}
+
 .depoimentos {
   background: var(--white);
 }
@@ -667,18 +711,21 @@ ul { list-style: none; }
 .lojas-grid {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 28px;
   margin-top: 24px;
+  max-width: 860px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .loja-card {
   background: var(--white);
   border-radius: var(--radius);
-  padding: 20px;
+  padding: 24px;
   box-shadow: var(--shadow);
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
   text-align: center;
   transition: box-shadow 0.2s ease;
 }
@@ -689,28 +736,29 @@ ul { list-style: none; }
 
 .loja-card h3 {
   font-family: var(--font-title);
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: var(--primary);
   margin-bottom: 4px;
 }
 
 .loja-address {
   color: var(--text-light);
-  font-size: 0.9rem;
+  font-size: 0.95rem;
   line-height: 1.5;
 }
 
 .loja-map {
   width: 100%;
-  height: 220px;
+  height: 360px;
   border-radius: var(--radius-sm);
   overflow: hidden;
   z-index: 0;
 }
 
 .loja-card .btn {
-  width: 100%;
-  margin-top: auto;
+  width: auto;
+  justify-self: center;
+  padding: 12px 28px;
 }
 
 .faq {
@@ -1248,11 +1296,6 @@ ul { list-style: none; }
     gap: 20px;
   }
 
-  .lojas-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
   .passos-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 24px;
@@ -1389,11 +1432,6 @@ ul { list-style: none; }
     gap: 24px;
   }
 
-  .lojas-grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 24px;
-  }
-
   .passos-grid {
     grid-template-columns: repeat(3, 1fr);
     gap: 28px;
@@ -1459,6 +1497,13 @@ ul { list-style: none; }
 
   .passo-card:hover {
     box-shadow: var(--shadow-hover);
+  }
+
+  .pag-btn:hover:not(:disabled) {
+    background: var(--primary);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(46,125,50,0.3);
   }
 }
 
