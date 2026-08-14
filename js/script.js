@@ -555,6 +555,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.querySelectorAll('.fade-in, .fade-in-up').forEach(el => observarAnimacao(el));
 
+  const formInicio = Date.now();
+  const formTempo = document.getElementById('formTempo');
+
+  const form = document.getElementById('contatoForm');
+  form.addEventListener('focusin', () => {
+    if (!formTempo.value) {
+      formTempo.value = (formInicio / 1000).toFixed(3);
+    }
+  }, { once: true });
+
   const telInput = document.getElementById('formTelefone');
   telInput.addEventListener('input', () => {
     telInput.value = aplicarMascaraTelefone(telInput.value);
@@ -570,9 +580,13 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 
-  document.getElementById('contatoForm').addEventListener('submit', e => {
+  form.addEventListener('submit', async e => {
     e.preventDefault();
     if (!validarFormulario()) return;
+
+    if (!formTempo.value) {
+      formTempo.value = (formInicio / 1000).toFixed(3);
+    }
 
     const btn = document.getElementById('formSubmit');
     const status = document.getElementById('formStatus');
@@ -580,19 +594,43 @@ document.addEventListener('DOMContentLoaded', () => {
     status.className = 'form-status loading visible';
     status.textContent = 'Enviando mensagem...';
 
-    setTimeout(() => {
+    try {
+      const res = await fetch('enviar_contato.php', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8' },
+        body: new URLSearchParams(new FormData(form)).toString()
+      });
+
+      let data;
+      try {
+        data = await res.json();
+      } catch {
+        throw new Error('Resposta inválida');
+      }
+
+      if (res.ok && data.status === 'ok') {
+        btn.disabled = false;
+        status.className = 'form-status sucesso visible';
+        status.textContent = data.message || 'Mensagem enviada com sucesso!';
+        form.reset();
+        formTempo.value = '';
+        document.querySelectorAll('.form-error').forEach(el => {
+          el.classList.remove('visible', 'sucesso-msg');
+          el.textContent = '';
+        });
+        document.querySelectorAll('.contato-form input, .contato-form textarea').forEach(el => {
+          el.classList.remove('sucesso', 'erro');
+        });
+        msgCount.textContent = '0';
+      } else {
+        btn.disabled = false;
+        status.className = 'form-status erro visible';
+        status.textContent = data.message || 'Não foi possível enviar a mensagem. Tente novamente.';
+      }
+    } catch (err) {
       btn.disabled = false;
-      status.className = 'form-status sucesso visible';
-      status.textContent = 'Mensagem enviada com sucesso! Entraremos em contato em breve.';
-      document.getElementById('contatoForm').reset();
-      document.querySelectorAll('.form-error').forEach(el => {
-        el.classList.remove('visible', 'sucesso-msg');
-        el.textContent = '';
-      });
-      document.querySelectorAll('.contato-form input, .contato-form textarea').forEach(el => {
-        el.classList.remove('sucesso', 'erro');
-      });
-      msgCount.textContent = '0';
-    }, 1500);
+      status.className = 'form-status erro visible';
+      status.textContent = 'Erro de conexão. Tente novamente em instantes.';
+    }
   });
 });

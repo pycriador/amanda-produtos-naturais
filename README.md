@@ -124,3 +124,22 @@ Todas as fotos de produtos são de uso gratuito do [Pexels](https://www.pexels.c
 ## Licença
 
 Este projeto é de uso livre para fins educacionais e comerciais.
+
+## Formulário de contato (PHP)
+
+O formulário envia mensagens via `enviar_contato.php` (requer servidor com PHP).
+
+**Configuração:**
+1. Edite `enviar_contato.php` e defina o email de destino em `$PARA`.
+2. Configure um MTA no servidor (sendmail/postfix) ou use SMTP via PHPMailer se `mail()` não funcionar.
+3. O formulário retorna JSON `{ "status": "ok" | "erro", "message": "..." }`.
+
+**Segurança implementada:**
+- Validação e sanitização de todos os campos no servidor
+- Proteção contra injeção de cabeçalhos de email (remoção de `\r`/`\n`)
+- Honeypot (campo oculto que bots preenchem)
+- Verificação de tempo mínimo de preenchimento (anti-bot)
+- Limite de envios por sessão (anti-spam)
+- Respostas JSON com códigos HTTP adequados
+
+> Obs.: O GitHub Pages é estático e não executa PHP — o envio de email funcionará apenas no servidor com suporte a PHP.

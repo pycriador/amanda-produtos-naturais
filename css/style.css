@@ -905,6 +905,14 @@ ul { list-style: none; }
   gap: 4px;
 }
 
+.form-group[aria-hidden="true"] {
+  position: absolute;
+  left: -9999px;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
 .form-group label {
   font-weight: 600;
   font-size: 0.9rem;
