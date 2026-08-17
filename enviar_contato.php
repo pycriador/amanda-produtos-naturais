@@ -1,17 +1,12 @@
 <?php
 declare(strict_types=1);
 
-/**
- * Endpoint de envio de contato - Amanda Produtos Naturais
- * Configuracao:
- *   1. Defina o email de destino em $PARA.
- *   2. Garanta que o servidor tenha um MTA (ex.: sendmail/postfix) configurado
- *      ou use um SMTP (biblioteca PHPMailer) caso o mail() nao funcione.
- * Respostas: JSON { "status": "ok"|"erro", "message": "..." }
- */
+require_once __DIR__ . '/vendor/autoload.php';
 
-$PARA = 'contato@amandanaturais.com.br';
-$ASSUNTO = 'Novo contato pelo site - Amanda Produtos Naturais';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+$config = require __DIR__ . '/config_email.php';
 
 header('Content-Type: application/json; charset=utf-8');
 header('X-Content-Type-Options: nosniff');
@@ -89,18 +84,30 @@ $corpo = "Nome: $nome\n"
     . "------------------------------\n"
     . "Mensagem:\n$mensagem\n";
 
-$headers = [
-    'From: Amanda Site <no-reply@' . (string)($_SERVER['SERVER_NAME'] ?? 'localhost') . '>',
-    'Reply-To: ' . $email,
-    'Content-Type: text/plain; charset=utf-8',
-    'MIME-Version: 1.0'
-];
+$mail = new PHPMailer(true);
 
-$enviado = @mail($PARA, $ASSUNTO, $corpo, implode("\r\n", $headers));
+try {
+    $mail->isSMTP();
+    $mail->Host       = $config['host'];
+    $mail->SMTPAuth   = true;
+    $mail->Username   = $config['username'];
+    $mail->Password   = $config['password'];
+    $mail->SMTPSecure = $config['encryption'];
+    $mail->Port       = $config['port'];
+    $mail->CharSet    = 'UTF-8';
 
-if ($enviado) {
+    $mail->setFrom($config['from_email'], $config['from_name']);
+    $mail->addReplyTo($email, $nome);
+    $mail->addAddress($config['to_email']);
+
+    $mail->isHTML(false);
+    $mail->Subject = 'Novo contato pelo site - Amanda Produtos Naturais';
+    $mail->Body    = $corpo;
+
+    $mail->send();
+
     $_SESSION['bloqueado_contato'] = time() + 60;
     responder(200, true, 'Mensagem enviada com sucesso! Entraremos em contato em breve.');
+} catch (Exception $e) {
+    responder(500, false, 'Nao foi possivel enviar a mensagem agora. Tente novamente em instantes.');
 }
-
-responder(500, false, 'Nao foi possivel enviar a mensagem agora. Tente novamente em instantes.');

@@ -37,6 +37,9 @@ Landing page profissional para loja de produtos naturais, temperos, grãos, erva
 /
 ├── index.html              # Página principal
 ├── README.md               # Documentação
+├── composer.json            # Dependências PHP (PHPMailer)
+├── config_email.php         # Configurações SMTP (edite com seus dados)
+├── enviar_contato.php       # Endpoint PHP de envio de contato
 ├── css/
 │   └── style.css           # Estilos completos (responsive + animations)
 ├── js/
@@ -125,14 +128,14 @@ Todas as fotos de produtos são de uso gratuito do [Pexels](https://www.pexels.c
 
 Este projeto é de uso livre para fins educacionais e comerciais.
 
-## Formulário de contato (PHP)
+## Formulário de contato (PHP + SMTP)
 
-O formulário envia mensagens via `enviar_contato.php` (requer servidor com PHP).
+O formulário envia mensagens via `enviar_contato.php` usando PHPMailer com SMTP.
 
 **Configuração:**
-1. Edite `enviar_contato.php` e defina o email de destino em `$PARA`.
-2. Configure um MTA no servidor (sendmail/postfix) ou use SMTP via PHPMailer se `mail()` não funcionar.
-3. O formulário retorna JSON `{ "status": "ok" | "erro", "message": "..." }`.
+1. Execute `composer install` no servidor para instalar o PHPMailer.
+2. Edite `config_email.php` com as credenciais SMTP do seu servidor.
+3. Garanta que o PHP tenha as extensões `openssl` e `mbstring` habilitadas.
 
 **Segurança implementada:**
 - Validação e sanitização de todos os campos no servidor
