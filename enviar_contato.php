@@ -21,7 +21,7 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-function responder(int $codigo, bool $ok, string $mensagem): void {
+function responder(int $codigo, bool $ok, string $mensagem) {
     http_response_code($codigo);
     echo json_encode(['status' => $ok ? 'ok' : 'erro', 'message' => $mensagem], JSON_UNESCAPED_UNICODE);
     exit;
@@ -71,7 +71,7 @@ if (comprimento($mensagem) < 20 || comprimento($mensagem) > 1000) {
     responder(422, false, 'A mensagem deve ter entre 20 e 1000 caracteres.');
 }
 
-$limpar = static function (string $valor): string {
+$limpar = function (string $valor) {
     return str_replace(["\r", "\n"], '', $valor);
 };
 
